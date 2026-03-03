@@ -7,6 +7,8 @@ percen = ((20*veiculo)/100)
 juros = 0
 
 if entrada < percen:
+    print(f'Esse foi o valor financiado {valor_financiado}')
+    print(f'Esse foi o Percentual {juros}')
     print('Financiamento negado')
 else:
     if (parcelas <= 24):
