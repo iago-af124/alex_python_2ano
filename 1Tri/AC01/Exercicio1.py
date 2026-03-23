@@ -22,6 +22,6 @@ else:
     valor_parcela = valor_total_juros / parcelas
 
     print(f'Esse foi o valor financiado {valor_financiado}')
-    print(f'Esse foi o Percentual {juros}')
+    print(f'Esse foi o Percentual {juros}%')
     print(f'Valor final {valor_total_juros}')
     print(f'Valor de parcela {valor_parcela}')
