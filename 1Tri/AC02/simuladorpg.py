@@ -1,5 +1,4 @@
 import random
-
 #1. Criação do Personagem
 def criacao_personagem():
     personagem = input("Coloque o nome de seu personagem: ")
@@ -40,12 +39,11 @@ def relatorio_final(personagem, classe, poder, calc_inimigos):
     print(f"Poder total: {poder}")
     print(f"Classificação no ranking: {classificacao(poder)}")
     print(f"Total de inimigos derrotados: {calc_inimigos}")
-
 #sistema de batalha
 def batalha_sistema(personagem, classe, poder):
-    vida_personagem = 30
+    vida_personagem = 25
     calc_inimigos = 0
-
+    xp = 0
     while vida_personagem > 0:
         inimigo_vida, inimigo_defesa, inimigo_ataque, inimigo_dano = inimigo()
         critico_usado = False
@@ -61,7 +59,7 @@ def batalha_sistema(personagem, classe, poder):
             ataque = input('Aperte enter para atacar: ')
             if ataque == '':
                 if not critico_usado:
-                    critico = input('O ataque foi critico? (s/n): ')
+                    critico = input('Quer atacar com o critico? (s/n): ')
                     if critico == 's':
                         print('Ataque CRITICO com sucesso (-2 de vida do inimigo)')
                         inimigo_vida -= 2
@@ -79,6 +77,7 @@ def batalha_sistema(personagem, classe, poder):
             if inimigo_vida <= 0:
                 print('Inimigo derrotado!')
                 calc_inimigos += 1
+                xp += random.randint(1,3)
                 break
 
             print('O inimigo vai atacar')
@@ -101,6 +100,7 @@ def batalha_sistema(personagem, classe, poder):
         if continuar != 's':
             print('Voce encerrou a aventura.')
             relatorio_final(personagem, classe, poder, calc_inimigos)
+            print(f'XP COLETADO: {xp}')
             break
 
     return calc_inimigos, vida_personagem
