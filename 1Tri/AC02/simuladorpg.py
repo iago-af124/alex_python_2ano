@@ -3,7 +3,7 @@ import random
 #1. Criação do Personagem
 def criacao_personagem():
     personagem = (input("Coloque o nome de seu personagem: "))
-    classe = (input("Coloque a classe do personagem (Guerreiro, mago ou arqueiro.): "))
+    classe = (input("Coloque a classe do personagem (Guerreiro, mago ou arqueiro): "))
     forca = int(input("Coloque a força do seu personagem: "))
     magia = int(input("Coloque o valor da magia: "))
     agilidade = (input("Coloque o valor da agilidade: "))
@@ -81,7 +81,15 @@ def batalha_sistema():
 personagem,classe,magia,forca,agilidade = criacao_personagem()
 poder = poder_personagem(forca,magia,agilidade)
 
-
+        # Relatorio final
+def relatorio_final():
+    print ("RELÁTORIO FINAL DO JOGADOR!")
+    print ("Nome do personagem: {personagem}")
+    print ("Classe escolhida: {classe}")
+    print ("Poder total: {forca}")
+    print ("Classificação no ranking: {classificacao}")
+    print ("Total de inimigos derrotados: {inimigo}")
+relatorio_final()
 
 
 #Batalha
