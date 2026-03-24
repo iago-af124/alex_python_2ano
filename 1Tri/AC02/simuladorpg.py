@@ -81,6 +81,9 @@ def batalha_sistema():
 personagem,classe,magia,forca,agilidade = criacao_personagem()
 poder = poder_personagem(forca,magia,agilidade)
 
+
+
+
 #Batalha
 def main():
     rodar = True
