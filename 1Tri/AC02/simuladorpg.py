@@ -26,7 +26,7 @@ def classificacao(poder):
 #inimigo
 def inimigo():
     inimigo_vida = random.randint(7, 20)
-    inimigo_defesa = random.randint(1, 10)
+    inimigo_defesa = random.randint(2, 6)
     inimigo_ataque = random.randint(2, 6)
     inimigo_dano = max(0, inimigo_ataque - inimigo_defesa)
     return inimigo_vida, inimigo_defesa, inimigo_ataque, inimigo_dano
@@ -62,7 +62,7 @@ def batalha_sistema(personagem, classe, poder):
                     critico = input('Quer atacar com o critico? (s/n): ')
                     if critico == 's':
                         print('Ataque CRITICO com sucesso (-2 de vida do inimigo)')
-                        inimigo_vida -= 2
+                        inimigo_vida -= 1
                         critico_usado = True
                     else:
                         print('Ataque com sucesso (-1 de vida do inimigo)')
