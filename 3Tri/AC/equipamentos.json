@@ -1,0 +1,12 @@
+[
+    {
+        "nome": "roger",
+        "idade": "123",
+        "pontuacao": 123.0
+    },
+    {
+        "nome": "Pao",
+        "idade": "1234",
+        "pontuacao": 1234.0
+    }
+]
